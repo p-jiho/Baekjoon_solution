@@ -10,7 +10,6 @@ case1 = [[0 for j in range(m)] for i in range(n)]
 case2 = [[0 for j in range(m)] for i in range(n)]
 for i in range(n):
     chess = list(input())
-    
     if i % 2 == 0:
         case1[i] = [chess[j] != w[j] for j in range(m)]
         case2[i] = [chess[j] != b[j] for j in range(m)]
@@ -26,8 +25,5 @@ for row in range(n-7):
         for i in range(row, row+8):
             s1 += sum(case1[i][col:col+8])
             s2 += sum(case2[i][col:col+8])
-        if result >= s1 and s2 >= s1:
-            result = s1
-        elif result > s2 and s1 > s2:
-            result = s2
+        result = min(result, s1, s2)
 print(result)
