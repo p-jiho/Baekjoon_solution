@@ -6,7 +6,7 @@ def solution(common):
         y = 0
         
     if common[2] == common[1] + x:
-        result = common[len(common) - 1] + x
+        result = common[-1] + x
     elif common[2] == common[1] * y:
-        result = common[len(common) - 1] * y
+        result = common[-1] * y
     return result
