@@ -1,5 +1,4 @@
 def solution(dots):
-    # from itertools import combinations, permutations을 쓰지 않는 방법
     result = 0
     x = dots[0]
     for i in range(1, len(dots)):
