@@ -2,7 +2,7 @@ import re
 def solution(s):
     all = [s]
     for i in range(1, len(s)):
-        all += [s[i:len(s)]+s[0:i]]
+        all += [s[i:]+s[:i]]
     n = 0
     for i in all:
         while(True):
