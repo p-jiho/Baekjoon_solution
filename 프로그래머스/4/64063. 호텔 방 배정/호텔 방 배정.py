@@ -1,5 +1,6 @@
 import sys
 sys.setrecursionlimit(10**6)
+
 def check(room_lst, index, l, k):
     new_i = room_lst[index]
     l.append(new_i)
@@ -9,6 +10,7 @@ def check(room_lst, index, l, k):
         return room_lst, new_i
     else:
         return check(room_lst, new_i, l, k)
+    
 def solution(k, room_number):
     room = {}
     result = []
